@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <script src="./modules/product.js"></script>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+      </style>
+</head>
+
+<body>
+    <h1>Product Store</h1>
+    <div ng-app="transflower" ng-controller="ProductController">
+        <form ng-submit="addProduct()">
+            <div>
+                <label>Product Id</label>
+                <input type="text" name="productId" id="productId" ng-model="productId" />
+            </div>
+            <div>
+                <label>Product Name</label>
+                <input type="text" name="productName" id="productName" ng-model="productName">
+            </div>
+            <div>
+                <label>Product Price</label>
+                <input type="text" name="productPrice" id="productPrice" ng-model="productPrice">
+            </div>
+            <div>
+                <label>Product Description</label>
+                <input type="text" name="productDescription" id="productDescription" ng-model="productDescription">
+            </div>
+            <div>
+                <button type="submit">Add product</button>
+            </div>
+        </form>
+   
+
+    <table>
+        <tr style="text-align:center; border: 1px; border-color: black;">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Description</td>
+        </tr>
+
+        <tr ng-repeat="product in products" style="text-align:center; padding: 2px;">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productPrice}}</td>
+            <td>{{product.productDescription}}</td>
+            <br>
+        </tr>
+    </table>
+</div>
+
+    <!-- <div> -->
+
+    <!-- <ol>  -->
+    <!-- <li ng-repeat="product in products"> {{product.productId}}  {{product.productName}}  {{product.productPrice}}  {{product.productDescription}} </li> -->
+    <!-- </ol> -->
+    <!-- </div> -->
+    <!-- <form ng-submit="onValidate()"></form>
+        <table>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" id="email" ng-model="user.email"></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" name="password" id="password" ng-model="user.password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Login</button></td>
+            </tr>
+            
+        </table>
+    </form> -->
+
+
+</body>
+
+</html>
