@@ -1,0 +1,16 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "my angular app",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "akash",
+  "license": "ISC",
+  "dependencies": {
+    "@types/angular": "^1.8.9",
+    "angular": "^1.8.3",
+    "typescript": "^5.7.3"
+  }
+}
