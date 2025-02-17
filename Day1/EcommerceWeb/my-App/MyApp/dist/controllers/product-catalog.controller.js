@@ -24,3 +24,4 @@ var ProductCatalogController = /** @class */ (function () {
     ProductCatalogController.$inject = ['$scope', 'ProductService'];
     return ProductCatalogController;
 }());
+

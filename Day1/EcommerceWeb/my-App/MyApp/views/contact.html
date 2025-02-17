@@ -1,0 +1,110 @@
+<head>
+    <style>
+        .contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    color: rgb(219, 57, 25);
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background: rgb(219, 57, 25);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgb(219, 57, 25);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background:rgb(219, 57, 25);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background: rgb(219, 57, 25);
+}
+    </style>
+</head>
+
+
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Whether you have a question about our flowers, delivery options, or a custom order, our team is here to help.</p>
+
+    <h2>📞 Get in Touch</h2>
+    <p><strong>Email:</strong> <a href="mailto:support@akashflowerstore.com">support@akashflowerstore.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+    <p><strong>Address:</strong> 123 Bloom Street, Floral City, India</p>
+
+    <h2>📩 Send Us a Message</h2>
+    <form ng-submit="submitForm()" name="contactForm" novalidate>
+        <label>Name:</label>
+        <input type="text" ng-model="contact.name" required placeholder="Your Name">
+        <span class="error" ng-show="contactForm.name.$dirty && contactForm.name.$error.required">Name is required</span>
+
+        <label>Email:</label>
+        <input type="email" ng-model="contact.email" required placeholder="Your Email">
+        <span class="error" ng-show="contactForm.email.$dirty && contactForm.email.$error.required">Valid email is required</span>
+
+        <label>Message:</label>
+        <textarea ng-model="contact.message" required placeholder="Your Message"></textarea>
+        <span class="error" ng-show="contactForm.message.$dirty && contactForm.message.$error.required">Message is required</span>
+
+        <button type="submit">Send Message</button>
+        <p class="success" ng-show="successMessage">{{ successMessage }}</p>
+    </form>
+
+    <a href="#!/home" class="back-btn">Back to Home</a>
+</div>

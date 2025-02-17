@@ -5,3 +5,5 @@ var HomeController = /** @class */ (function () {
     HomeController.$inject = ['$scope', 'ProductService'];
     return HomeController;
 }());
+
+angular.module('myApp').controller('HomeController', HomeController);

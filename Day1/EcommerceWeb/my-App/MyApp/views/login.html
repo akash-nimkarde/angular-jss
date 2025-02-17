@@ -1,0 +1,82 @@
+<!-- <div class="login-container d-flex justify-content-center align-items-center">
+    <div class="login-left p-5 text-center" style="background: rgba(255, 255, 255, 0.7); border-radius: 10px;">
+        <h2 class="text-primary">Login</h2>
+        <p class="text-muted">Login to Akash Flower Store</p>
+        
+    </div> -->
+
+    <div class="login-right p-5 border-left" style="background: rgba(255, 255, 255, 0.7); border-radius: 10px;">
+        <form ng-submit="vm.login()" class="login-form">
+            <div class="form-group">
+                <label for="email">Please Enter Your Username / Email</label>
+                <input type="text" class="form-control" id="email" ng-model="vm.user.email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" ng-model="vm.user.password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mt-4">Login</button>
+
+            <p class="error-message text-danger mt-3">{{ vm.message }}</p>
+        </form>
+
+        <p class="register-link mt-3 text-center">New to the site? <a href="#!/register" class="text-primary">Create an account</a></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* Apply background image */
+    .login-container {
+        background-image: url('../../../assets/loginbackground.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Overlay style for better readability */
+    .login-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* dark overlay */
+        z-index: -1;
+    }
+
+    /* Style adjustments for text contrast */
+    .login-left h2, .login-left p, .login-right form label, .login-right p {
+        color: #333; /* Darker text for contrast */
+    }
+
+    .login-right input, .login-right button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .btn-block {
+        font-size: 18px;
+    }
+</style>

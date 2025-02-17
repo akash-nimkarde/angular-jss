@@ -6,7 +6,7 @@ var ShoppingController = /** @class */ (function () {
         $scope['vm'] = this;
     }
     ShoppingController.prototype.getCartData = function () {
-        this.products = JSON.parse(this.productService.getCartProducts());
+        this.products = JSON.parse(JSON.stringify(this.productService.getCartProducts()));
     };
     ShoppingController.prototype.removeFromCart = function () {
         var x = 0;
@@ -14,3 +14,4 @@ var ShoppingController = /** @class */ (function () {
     ShoppingController.$inject = ['$scope', 'ProductService'];
     return ShoppingController;
 }());
+

@@ -42,3 +42,4 @@ var MyFirstController = /** @class */ (function () {
     };
     return MyFirstController;
 }());
+
