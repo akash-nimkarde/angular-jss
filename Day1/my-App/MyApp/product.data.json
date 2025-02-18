@@ -1,0 +1,43 @@
+[
+    {
+        "id": "01",
+        "name": "Red Rose",
+        "type": "Flowers",
+        "subtype": "Rose",
+        "price": "10",
+        "imgSrc": "https://th.bing.com/th/id/OIP.FleaTMVEwwACu62pKdIoRQHaEo?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": "02",
+        "name": "White Rose",
+        "type": "Flowers",
+        "subtype": "Rose",
+        "price": "20",
+        "imgSrc": "https://cdn.shopify.com/s/files/1/0729/7518/8257/files/a-picture-of-a-white-rose-bud.1200x675.jpg?v=1692886849"
+    },
+    {
+        "id": "03",
+        "name": "Lily",
+        "type": "Flowers",
+        "subtype": "Lily",
+        "price": "13",
+        "imgSrc": "https://www.thespruce.com/thmb/X7_jyT6DD0U1-4vdDfyYCK0ahsw=/4508x3005/filters:fill(auto,1)/beautiful-lily-varieties-to-grow-4136203-3-ecb49980016c4a498a90d6c379307ddd.jpg"
+    },
+    {
+        "id": "04",
+        "name": "Tulip",
+        "type": "Flowers",
+        "subtype": "Tulip",
+        "price": "15",
+        "imgSrc": "https://th.bing.com/th/id/OIP.UQjh2jnuDV2zOT7m_qQPDwHaFj?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": "05",
+        "name": "Lotus",
+        "type": "Flowers",
+        "subtype": "Lotus",
+        "price": "30",
+        "imgSrc": "https://th.bing.com/th/id/OIP.eVRjqAB4RzkUTkVDrlgYuwHaHa?rs=1&pid=ImgDetMain"
+    }
+    
+]

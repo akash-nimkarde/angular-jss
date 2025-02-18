@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+        <script src="./angular.min.js"></script>
+        <script src="./angular-route.min.js"></script>
+        <script src="./dist/services/product.service.js"></script>
+        <script src="./dist/controllers/app.controller.js"></script>
+        <script src="./dist/controllers/home.controller.js"></script>
+        <script src="./dist/controllers/product-catalog.controller.js"></script>
+        <script src="./dist/controllers/shopping.controller.js"></script>
+        <script src="./dist/controllers/login.controller.js"></script>
+        <script src="./dist/services/login.services.js"></script>
+        <script src="./dist/controllers/register.controller.js"></script>
+        <script src="./dist/controllers/about.controller.js"></script>
+        <script src="./dist/controllers/contact.controller.js"></script>
+        <script src="./dist/app.module.js"></script>
+        <script src=""></script>
+        <style>
+            .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+            height: calc(100vh - 120px); /* Adjust to ensure content fits */
+        }
+        
+            /* Add basic styling for the header */
+            .header {
+                background-color: rgb(219, 57, 25);
+                color: white;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 10px;
+            }
+    
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+    
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 25px;
+            }
+    
+            .nav-links li {
+                display: inline;
+            }
+    
+            .search-bar input {
+                padding: 12px;
+                font-size: 18px;
+            }
+    
+            .cart-icon {
+                font-size: 20px;
+            }
+            .nav-cust{
+                color: black;
+                font-size: larger;
+                text-decoration: none;
+        }
+        </style>
+    </head>
+    
+    <body ng-app="myApp" style="background-image: url('./src/assets/background.jpg');" background-color: rgb(69, 30, 208);>
+        <div style="margin-bottom: 0vh;" ng-include src="'views/header.html'"></div> 
+        <div ng-view></div>         
+        
+    </body>
+</html>
