@@ -19,11 +19,11 @@ export class ShoppingController{
         }
         
           removeFromCart(product: Product){
-            this.products = this.products.filter(o => o.id == product.id);
+            this.products = this.products.filter(o => o.id != product.id);
         
             if(product){
               this.productService.addProductToCart(this.products);
-              alert("Product added Successfully");
+              //alert("Product added Successfully");
               // this.location.path("/shoppingcart");
             }
           }

@@ -10,10 +10,10 @@ var ShoppingController = /** @class */ (function () {
         this.products = cartData ? JSON.parse(cartData) : [];
     };
     ShoppingController.prototype.removeFromCart = function (product) {
-        this.products = this.products.filter(function (o) { return o.id == product.id; });
+        this.products = this.products.filter(function (o) { return o.id != product.id; });
         if (product) {
             this.productService.addProductToCart(this.products);
-            alert("Product added Successfully");
+           // alert("Product added Successfully");
             // this.location.path("/shoppingcart");
         }
     };

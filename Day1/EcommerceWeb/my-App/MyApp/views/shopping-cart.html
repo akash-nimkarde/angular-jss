@@ -12,7 +12,7 @@
                             <h5 class="card-title">{{product.name}}</h5>
                             <p class="card-text">Type: {{product.type}} {{product.subtype}}<br>
                                 Price: <b>{{product.price | currency : "₹" : 2}}</b></p>
-                            <button class="btn btn-danger btn-sm" ng-click="shoppingCtrl.removeFromCart(product)">Remove</button>
+                            <button class="btn btn-danger btn-sm" ng-click="vm.removeFromCart(product)">Remove</button>
                         </div>
                     </div>
                 </div>
