@@ -22,9 +22,13 @@ export class ProductCatalogController{
     }
 
     onAddCart(product: Product){
+      let cartData = this.productService.getCartProducts();
+      var temp = cartData ? JSON.parse(cartData) : [];
       if(product){
-        this.productService.addProductToCart(product);
-        this.location.path("/shoppingcart");
+        temp.push(product);
+        this.productService.addProductToCart(temp);
+        alert("Product added Successfully");
+        // this.location.path("/shoppingcart");
       }
     }
 }

@@ -3,7 +3,7 @@ import { Product } from "../models/product.model";
 import { ProductService } from "../services/product.service";
 
 export class ShoppingController{
-      products = [];
+      products: Product[] = [];
          static $inject = ['$scope','ProductService']
           constructor($scope: IScopeCustom,
               private productService: ProductService
@@ -11,10 +11,20 @@ export class ShoppingController{
               this.getCartData();
               $scope['vm'] = this;
           } 
-          getCartData(){
-            // this.products = JSON.parse(this.productService.getCartProducts());
-          }
-          removeFromCart(){
-            var x = 0;
+
+          
+          getCartData() {
+            let cartData = this.productService.getCartProducts();
+            this.products = cartData ? JSON.parse(cartData) : [];
+        }
+        
+          removeFromCart(product: Product){
+            this.products = this.products.filter(o => o.id == product.id);
+        
+            if(product){
+              this.productService.addProductToCart(this.products);
+              alert("Product added Successfully");
+              // this.location.path("/shoppingcart");
+            }
           }
 }

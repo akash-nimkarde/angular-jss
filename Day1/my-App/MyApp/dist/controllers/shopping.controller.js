@@ -6,10 +6,16 @@ var ShoppingController = /** @class */ (function () {
         $scope['vm'] = this;
     }
     ShoppingController.prototype.getCartData = function () {
-        // this.products = JSON.parse(this.productService.getCartProducts());
+        var cartData = this.productService.getCartProducts();
+        this.products = cartData ? JSON.parse(cartData) : [];
     };
-    ShoppingController.prototype.removeFromCart = function () {
-        var x = 0;
+    ShoppingController.prototype.removeFromCart = function (product) {
+        this.products = this.products.filter(function (o) { return o.id == product.id; });
+        if (product) {
+            this.productService.addProductToCart(this.products);
+            alert("Product added Successfully");
+            // this.location.path("/shoppingcart");
+        }
     };
     ShoppingController.$inject = ['$scope', 'ProductService'];
     return ShoppingController;

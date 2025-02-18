@@ -6,8 +6,8 @@ import { IScopeCustom } from "../interfaces/iscope.interface";
 export class MyFirstController{
     name!: string;
     user = {
-        "email":"vaibhav@gmail.com",
-        "password":"Vaibhav1005"
+        "email":"akash@gmail.com",
+        "password":"akash"
     };
     users = [
         {
@@ -15,28 +15,12 @@ export class MyFirstController{
             "password":"alex1005"
         },
         {
-            "email":"swapnil@gmail.com",
-            "password":"swapnil1006"
+            "email":"tom@gmail.com",
+            "password":"tom"
         },
-        {
-            "email":"nasir@gmail.com",
-            "password":"nasir1007"
-        },
-        {
-            "email":"pravin@gmail.com",
-            "password":"pravin1008"
-        },
-        {
-            "email":"onkar@gmail.com",
-            "password":"onkar1009"
-        },
-        {
-            "email":"lalit@gmail.com",
-            "password":"lalit1010"
-        }
     ]
     onValidate(){
-        if(this.user.email === "vaibhav@gmail.com" && this.user.password === "Vaibhav1005"){
+        if(this.user.email === "akash@gmail.com" && this.user.password === "akash"){
             console.log("Welcome");
         }else{
             console.log("Invalid");

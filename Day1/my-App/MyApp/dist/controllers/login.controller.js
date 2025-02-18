@@ -1,3 +1,4 @@
+
 var LoginController = /** @class */ (function () {
     function LoginController($scope, $window, authService) {
         this.$scope = $scope;

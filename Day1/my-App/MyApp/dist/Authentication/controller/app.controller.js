@@ -1,3 +1,4 @@
+
 var AppController = /** @class */ (function () {
     function AppController($scope, $location) {
         var _this = this;

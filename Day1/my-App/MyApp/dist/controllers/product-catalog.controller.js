@@ -17,9 +17,13 @@ var ProductCatalogController = /** @class */ (function () {
         });
     };
     ProductCatalogController.prototype.onAddCart = function (product) {
+        var cartData = this.productService.getCartProducts();
+        var temp = cartData ? JSON.parse(cartData) : [];
         if (product) {
-            this.productService.addProductToCart(product);
-            this.location.path("/shoppingcart");
+            temp.push(product);
+            this.productService.addProductToCart(temp);
+            alert("Product added Successfully");
+            // this.location.path("/shoppingcart");
         }
     };
     ProductCatalogController.$inject = ['$scope', 'ProductService', '$location'];

@@ -1,3 +1,4 @@
+
 var HomeController = /** @class */ (function () {
     function HomeController($scope) {
         this.$scope = $scope;

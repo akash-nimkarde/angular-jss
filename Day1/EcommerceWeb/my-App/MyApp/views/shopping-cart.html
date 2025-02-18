@@ -1,9 +1,8 @@
-<div class="container mt-4" ng-controller="ShoppingController as shoppingCtrl">
+<div class="container mt-4" ng-controller="ShoppingController as vm">
     <h3>Your Cart</h3>
-    {{shoppingCtrl}}
     <div class="row">
         <div class="col-12">
-            <div ng-repeat="product in shoppingCtrl.products" class="card" style="border: solid 1px #ddd; margin-bottom: 10px;">
+            <div ng-repeat="product in vm.products" class="card" style="border: solid 1px #ddd; margin-bottom: 10px;">
                 <div class="row g-0">
                     <div class="col-md-3">
                         <img src="{{product.imgSrc}}" class="img-fluid rounded-start" alt="{{product.name}}" style="height: 100px; object-fit: cover;">
@@ -22,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <!-- <h4>Total: <b>{{shoppingControllerCtrl.cart.reduce((total, product) => total + product.price, 0) | currency : "₹" : 2}}</b></h4> -->
+         
         </div>
     </div>
 </div>
