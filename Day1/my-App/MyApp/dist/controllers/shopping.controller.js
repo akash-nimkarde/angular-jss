@@ -13,7 +13,7 @@ var ShoppingController = /** @class */ (function () {
         this.products = this.products.filter(function (o) { return o.id != product.id; });
         if (product) {
             this.productService.addProductToCart(this.products);
-           // alert("Product added Successfully");
+            //alert("Product added Successfully");
             // this.location.path("/shoppingcart");
         }
     };

@@ -16,7 +16,7 @@ import { LoginService } from './services/login.services';
 
 angular.module('myApp', ['ngRoute'])
 .service('ProductService',ProductService)
-.service('loginService', LoginService)
+.service('LoginService', LoginService)
 .controller('MyFirstController',MyFirstController)
 .controller('ProductCatalogController',ProductCatalogController)
 .controller('ShoppingController',ShoppingController)

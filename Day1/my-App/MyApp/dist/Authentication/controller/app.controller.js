@@ -1,4 +1,4 @@
-
+import * as angular from 'angular';
 var AppController = /** @class */ (function () {
     function AppController($scope, $location) {
         var _this = this;
@@ -13,4 +13,5 @@ var AppController = /** @class */ (function () {
     AppController.$inject = ['$scope', '$location'];
     return AppController;
 }());
+export { AppController };
 angular.module('ecomApp').controller('AppController', AppController);

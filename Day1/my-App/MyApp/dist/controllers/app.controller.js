@@ -6,14 +6,13 @@ var MyFirstController = /** @class */ (function () {
         };
         this.users = [
             {
-                "email":"alex@gmail.com",
-                "password":"alex1005"
+                "email": "alex@gmail.com",
+                "password": "alex1005"
             },
             {
-                "email":"tom@gmail.com",
-                "password":"tom"
+                "email": "tom@gmail.com",
+                "password": "tom"
             },
-        
         ];
         $scope['vm'] = this;
     }
@@ -27,4 +26,3 @@ var MyFirstController = /** @class */ (function () {
     };
     return MyFirstController;
 }());
-

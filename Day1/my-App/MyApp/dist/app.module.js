@@ -38,19 +38,19 @@ angular.module('myApp', ['ngRoute'])
             controllerAs: 'contactControllerCtrl' // Use 'contactCtrl' as alias for the controller instance
         })
             .when('/login', {
-            templateUrl: 'views/login.html', // Template for the login route
-            controller: 'LoginController', // Controller for the login route
-            controllerAs: 'loginControllerCtrl' // Use 'loginCtrl' as alias for the controller instance
+            templateUrl: 'views/login.html', // Template for the contact route
+            controller: 'LoginController', // Controller for the contact route
+            controllerAs: 'loginControllerCtrl' // Use 'contactCtrl' as alias for the controller instance
         })
             .when('/register', {
-            templateUrl: 'views/register.html', // Template for the register route
-            controller: 'RegisterController', // Controller for the register route
-            controllerAs: 'registerControllerCtrl' // Use 'registerCtrl' as alias for the controller instance
+            templateUrl: 'views/register.html', // Template for the contact route
+            controller: 'RegisterController', // Controller for the contact route
+            controllerAs: 'registerControllerCtrl' // Use 'contactCtrl' as alias for the controller instance
         })
             .when('/product', {
-            templateUrl: 'views/product.catalog.html', // Template for the product.catalog route
-            controller: 'Product-CatalogController', // Controller for the product.catalog route
-            controllerAs: 'product-CatalogControllerCtrl' // Use 'productCatalogCtrl' as alias for the controller instance
+            templateUrl: 'views/product.catalog.html', // Template for the contact route
+            controller: 'Product-CatalogController', // Controller for the contact route
+            controllerAs: 'product-CatalogControllerCtrl' // Use 'contactCtrl' as alias for the controller instance
         })
             .otherwise({
             redirectTo: "/"

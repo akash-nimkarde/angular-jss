@@ -1,9 +1,8 @@
-
 var LoginController = /** @class */ (function () {
-    function LoginController($scope, $window, loginService) {
+    function LoginController($scope, $window, LoginService) {
         this.$scope = $scope;
         this.$window = $window;
-        this.loginService = loginService;
+        this.loginService = LoginService;
         this.user = { name: "", email: "", password: "", mobile: "", address: "", country: "" };
         this.message = null;
         $scope.vm = this;
