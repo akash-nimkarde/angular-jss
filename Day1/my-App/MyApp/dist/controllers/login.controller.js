@@ -1,15 +1,15 @@
 
 var LoginController = /** @class */ (function () {
-    function LoginController($scope, $window, authService) {
+    function LoginController($scope, $window, loginService) {
         this.$scope = $scope;
         this.$window = $window;
-        this.authService = authService;
+        this.loginService = loginService;
         this.user = { name: "", email: "", password: "", mobile: "", address: "", country: "" };
         this.message = null;
         $scope.vm = this;
     }
     LoginController.prototype.login = function () {
-        var authenticatedUser = this.authService.login(this.user.email, this.user.password);
+        var authenticatedUser = this.loginService.login(this.user.email, this.user.password);
         if (authenticatedUser) {
             localStorage.setItem('loggedInUser', JSON.stringify(authenticatedUser));
             localStorage.setItem('loggedInUserId', authenticatedUser.id);
@@ -21,12 +21,12 @@ var LoginController = /** @class */ (function () {
         }
     };
     LoginController.prototype.register = function () {
-        this.message = this.authService.register(this.user);
+        this.message = this.loginService.register(this.user);
         if (this.message === "Registration successful!") {
             this.$window.location.href = "#!/login";
         }
     };
-    LoginController.$inject = ['$scope', '$window', 'AuthService'];
+    LoginController.$inject = ['$scope', '$window', 'LoginService'];
     return LoginController;
 }());
 angular.module('myApp').controller('LoginController', LoginController);

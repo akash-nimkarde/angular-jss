@@ -1,6 +1,7 @@
 
 angular.module('myApp', ['ngRoute'])
     .service('ProductService', ProductService)
+    .service('LoginService', LoginService)
     .controller('MyFirstController', MyFirstController)
     .controller('ProductCatalogController', ProductCatalogController)
     .controller('ShoppingController', ShoppingController)

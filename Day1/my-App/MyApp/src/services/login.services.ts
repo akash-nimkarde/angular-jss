@@ -31,4 +31,3 @@ export class LoginService {
     }
 }
 
-angular.module('myApp').service('loginService', LoginService);

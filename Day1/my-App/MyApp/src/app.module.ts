@@ -9,12 +9,14 @@ import { HomeController } from './controllers/home.controller';
 import {RegisterController} from './controllers/register.controller';
 import { AboutController } from './controllers/about.controller';
 import {ContactController} from './controllers/contact.controller';
+import { LoginService } from './services/login.services';
 
 
 
 
 angular.module('myApp', ['ngRoute'])
 .service('ProductService',ProductService)
+.service('loginService', LoginService)
 .controller('MyFirstController',MyFirstController)
 .controller('ProductCatalogController',ProductCatalogController)
 .controller('ShoppingController',ShoppingController)

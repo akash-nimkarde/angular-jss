@@ -6,7 +6,7 @@ interface IAuthScope extends angular.IScope {
 }
 
 export class LoginController {
-    static $inject = ['$scope', '$window', 'AuthService'];
+    static $inject = ['$scope', '$window', 'LoginService'];
     user: any;
     message: string | null;
 

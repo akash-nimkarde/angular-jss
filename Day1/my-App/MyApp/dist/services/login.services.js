@@ -22,4 +22,3 @@ var LoginService = /** @class */ (function () {
     };
     return LoginService;
 }());
-angular.module('myApp').service('loginService', LoginService);
